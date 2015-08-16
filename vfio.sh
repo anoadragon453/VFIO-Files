@@ -5,7 +5,7 @@ sudo vfio-bind 0000:0a:00.0 0000:0a:00.1 0000:00:1b.0
 #sudo systemctl start nmbd.service
 
 echo "Starting Synergy"
-/usr/bin/synergys --daemon --config /home/rainbow/.synergy/synergy.conf
+/usr/bin/synergys --daemon --config /etc/synergy.conf
 
 sudo qemu-system-x86_64 -enable-kvm -m 8192 -cpu host,kvm=off \
 -smp cores=4,threads=2 \
